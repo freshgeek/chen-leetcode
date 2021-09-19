@@ -58,7 +58,7 @@ public class solution_0315 {
 			return Collections.singletonList(0);
 		}
 		initTreeAndIndex(nums);
-		List<Integer> ret = new ArrayList<Integer>(nums.length);
+		List<Integer> ret = new ArrayList<>(nums.length);
 
 		for (int i = nums.length - 1; i >= 0; i--) {
 			int num = nums[i];

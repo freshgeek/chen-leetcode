@@ -1,13 +1,12 @@
 package top.chen.leetcode;
 
 
-import cn.hutool.json.JSON;
-import cn.hutool.json.JSONUtil;
+ import cn.hutool.json.JSONUtil;
 
 /**
  * 给你一个头结点为 head 的单链表和一个整数 k ，请你设计一个算法将链表分隔为 k 个连续的部分。
  * <p>
- * 每部分的长度应该尽可能的相等：任意两部分的长度差距不能超过 1 。这可能会导致有些部分为 null 。
+ * 每部分的长度应该尽可能地相等：任意两部分的长度差距不能超过 1 。这可能会导致有些部分为 null 。
  * <p>
  * 这 k 个部分应该按照在链表中出现的顺序排列，并且排在前面的部分的长度应该大于或等于排在后面的长度。
  * <p>
@@ -24,17 +23,11 @@ import cn.hutool.json.JSONUtil;
  *
  * @author chenchao
  */
+@SuppressWarnings("AlibabaClassNamingShouldBeCamel")
 public class solution_0725 {
 	public static class ListNode {
 		int val;
 		ListNode next;
-
-		ListNode() {
-		}
-
-		ListNode(int val) {
-			this.val = val;
-		}
 
 		ListNode(int val, ListNode next) {
 			this.val = val;

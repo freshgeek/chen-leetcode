@@ -8,7 +8,7 @@ import java.util.stream.IntStream;
  * @author chenchao
  * @link https://leetcode.cn/problems/minimum-cost-to-hire-k-workers/
  */
-public class solution_857 {
+public class solution_0857 {
 
 	public double mincostToHireWorkers(int[] quality, int[] wage, int k) {
 		// 对工资组中的每名工人，应当按其工作质量与同组其他工人的工作质量的比例来支付工资。

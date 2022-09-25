@@ -5,9 +5,10 @@ public class offer_003 {
 		// 原地交换解法
 		// 因为题目是长度n的数组，数值在0 - n-1，所以可以直接复用数组的空间，达到o1
 		// 则需要假定索引值等于值
-		for (int i = 0; i < nums.length; i++) {
+		for (int i = 0; i < nums.length; ) {
 			if (nums[i] == i) {
 				// 如果索引和值相等则
+				i++;
 				continue;
 			}
 			// 如果值已经有索引值对应，说明重复了

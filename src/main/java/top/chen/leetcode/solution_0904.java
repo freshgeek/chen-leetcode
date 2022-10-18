@@ -1,13 +1,29 @@
 package top.chen.leetcode;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @author chenchao
  */
 public class solution_0904 {
 
 	public int totalFruit(int[] fruits) {
-		// 进阶版 显然每次都要把第i个开始的最长，那我把遍历好的下标记录下来，下次就不用计算了
-
+		Map<Integer, Integer> key = new HashMap<>();
+		int max = 0;
+		int left = 0;
+		for (int j = 0; j < fruits.length; j++) {
+			key.put(fruits[j], key.getOrDefault(fruits[j], 0) + 1);
+			while (key.size() > 2) {
+				key.put(fruits[left], key.get(fruits[left]) - 1);
+				if (key.get(fruits[left]) <= 0) {
+					key.remove(fruits[left]);
+				}
+				left++;
+			}
+			max = Math.max(j - left + 1, max);
+		}
+		return max;
 	}
 
 	public int baseTotalFruit(int[] fruits) {
